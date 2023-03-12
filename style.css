@@ -1,0 +1,179 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(184, 245, 240);
+    font-family: 'Montserrat', sans-serif;
+    color: blue;
+    margin: 0;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    max-width: 50%;
+    margin: 0  auto;
+    padding: 2rem 1rem;
+    
+} 
+
+@media (min-width: 820px) {
+	.wrapper {
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 1920px) {
+	.wrapper {
+        max-width: 50%;
+    }
+}
+
+h1 {
+    margin: 0 auto 1rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: black;
+}
+
+@media (min-width: 820px) {
+    h1 {
+        margin: 0 auto 0.5rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+}
+
+@media (min-width: 1920px) {
+	h1 {
+        font-size: 3rem;
+    }
+}
+
+.accordeon {
+    min-width: 100%;
+    margin: 0 auto;
+}
+
+span {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1rem;
+}
+
+@media (min-width: 820px) {
+    span {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 1920px) {
+	span {
+        font-size: 2.4rem;
+    }
+}
+
+label>span {
+    display: none;
+}
+
+.accordeon:hover span {
+    display: block;
+    color: black;
+}
+
+.accordeon:hover .accordeon-title {
+    color: black 
+}
+
+.accordeon-input:checked + label>span {
+    transform: rotate(45deg);
+}
+
+.accordeon-input:checked + .accordeon-title {
+    color: black;
+}
+
+.accordeon-input:checked ~ .accordeon-image {
+    display: block;
+}
+
+.accordeon-item {
+    width: 100%;
+    cursor: pointer;
+    border-top: 0.1px solid rgb(173, 170, 170);
+    margin: 1rem 0;
+}
+
+.accordeon-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding-top: 1rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+@media (min-width: 820px) {
+    .accordeon-title {
+    font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 1920px) {
+	.accordeon-title {
+        font-size: 2.4rem;
+}
+}
+
+.accordeon-text {
+    display: block;
+}
+
+.accordeon-title:hover {
+    color: blue;
+    transition: color 0.4s ease-out;
+} 
+
+.accordeon-input {
+    width: 0;
+    height: 0;
+    position: absolute;
+    appearance: none;
+}
+
+.accordeon-image {
+    margin-top: 2rem;
+    display: none;
+    cursor: pointer;
+    text-align: center;
+    animation: 1s show ease;
+}
+
+@keyframes show {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.image {
+   width: 70%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
